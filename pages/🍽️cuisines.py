@@ -19,7 +19,7 @@ st.set_page_config(
     layout='wide'
     )
 
-df = pd.read_csv(r'C:\Users\renan\OneDrive\DS\python\projetozomato\dataset\zomato.csv')
+df = pd.read_csv('dataset\zomato.csv')
 
 
 # Funções de tratamento
@@ -107,8 +107,8 @@ st.header(' 🍽️Cozinhas')
 
 
 # Carregar e exibir a imagem na barra lateral
-image_path = r'C:\Users\renan\OneDrive\DS\python\projetozomato\images\logo.jpg'
-image = Image.open(image_path)
+#image_path = r'C:\Users\renan\OneDrive\DS\python\projetozomato\images\logo.jpg'
+image = Image.open('logo.jpg')
 st.sidebar.image(image, width=120)
 
 # Exibir texto na barra lateral
