@@ -3,3 +3,4 @@ matplotlib==3.9.2
 seaborn==0.13.2
 plotly==5.24.1
 folium==0.18.0
+haversine==2.8.1
