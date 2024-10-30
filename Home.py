@@ -28,7 +28,7 @@ st.set_page_config(
     page_icon='🏠', 
     )   
 
-df = pd.read_csv('dataset\zomato.csv')
+df = pd.read_csv('dataset/zomato.csv')
 
 
 
