@@ -31,6 +31,7 @@ st.set_page_config(
 df = pd.read_csv('dataset\zomato.csv')
 
 
+
 # Funções de tratamento
 def country_name(country_id):
     """
