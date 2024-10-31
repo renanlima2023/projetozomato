@@ -155,7 +155,7 @@ culinarias_selectbox = st.sidebar.multiselect(
 #==================================
 
 with st.container():
-    st.markdown('#### Aqui você encotras os principais tipos de culinária dos melhores restaurantes!')
+    st.markdown('#### Aqui você encontra os principais tipos de culinária dos melhores restaurantes!')
     st.markdown("""---""")
 
 
