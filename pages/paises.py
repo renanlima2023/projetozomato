@@ -229,11 +229,15 @@ with st.container():
   
   
 # Cálculo da média de avaliações por país
-        average_votes = df.groupby('country')['votes'].mean().reset_index()
-        average_votes.columns = ['País', 'Média de Avaliações']
+       average_votes = df.groupby('country')['votes'].mean().reset_index()
+average_votes.columns = ['País', 'Média de Avaliações']
 
-        # Mantém apenas os 6 países com as maiores médias de avaliações
-    average_votes = average_votes.sort_values('Média de Avaliações', ascending=False).head(6)
+# Arredonda a coluna "Média de Avaliações" para duas casas decimais
+average_votes['Média de Avaliações'] = average_votes['Média de Avaliações'].round(2)
+
+# Mantém apenas os 6 países com as maiores médias de avaliações
+average_votes = average_votes.sort_values('Média de Avaliações', ascending=False).head(6)
+
 
 # Criação do gráfico de barras
 fig = px.bar(
@@ -272,10 +276,15 @@ with col2:
         
     # Cálculo da média do preço de um prato para duas pessoas por país
     average_cost = df.groupby('country')['average_cost_for_two'].mean().reset_index()
-    average_cost.columns = ['País', 'Média de Preço para Duas Pessoas']
+average_cost.columns = ['País', 'Média de Preço para Duas Pessoas']
+
+# Arredonda a média para duas casas decimais
+average_cost['Média de Preço para Duas Pessoas'] = average_cost['Média de Preço para Duas Pessoas'].round(2)
 
 # Mantém apenas os 6 países com as maiores médias de preço
-    average_cost = average_cost.sort_values('Média de Preço para Duas Pessoas', ascending=False).head(6)
+average_cost = average_cost.sort_values('Média de Preço para Duas Pessoas', ascending=False).head(6)
+
+
 
 # Criação do gráfico de barras
 fig_cost = px.bar(
